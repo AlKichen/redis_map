@@ -1,0 +1,96 @@
+version: '3'
+
+services:
+  redis-node-1:
+    image: redis:7.0
+    container_name: redis-node-1
+    command: /cluster-entrypoint.sh
+    volumes:
+      - ./redis-node/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./cluster-entrypoint.sh:/cluster-entrypoint.sh
+    environment:
+      - IS_FIRST_NODE=true
+      - REDIS_NODES=${REDIS_NODES}
+    ports:
+      - 7001:6379
+    networks:
+      - redis-cluster-net
+
+  redis-node-2:
+    image: redis:7.0
+    container_name: redis-node-2
+    command: /cluster-entrypoint.sh
+    volumes:
+      - ./redis-node/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./cluster-entrypoint.sh:/cluster-entrypoint.sh
+    environment:
+      - IS_FIRST_NODE=false
+      - REDIS_NODES=${REDIS_NODES}
+    ports:
+      - 7002:6379
+    networks:
+      - redis-cluster-net
+
+  redis-node-3:
+    image: redis:7.0
+    container_name: redis-node-3
+    command: /cluster-entrypoint.sh
+    volumes:
+      - ./redis-node/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./cluster-entrypoint.sh:/cluster-entrypoint.sh
+    environment:
+      - IS_FIRST_NODE=false
+      - REDIS_NODES=${REDIS_NODES}
+    ports:
+      - 7003:6379
+    networks:
+      - redis-cluster-net
+
+  redis-node-4:
+    image: redis:7.0
+    container_name: redis-node-4
+    command: /cluster-entrypoint.sh
+    volumes:
+      - ./redis-node/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./cluster-entrypoint.sh:/cluster-entrypoint.sh
+    environment:
+      - IS_FIRST_NODE=false
+      - REDIS_NODES=${REDIS_NODES}
+    ports:
+      - 7004:6379
+    networks:
+      - redis-cluster-net
+
+  redis-node-5:
+    image: redis:7.0
+    container_name: redis-node-5
+    command: /cluster-entrypoint.sh
+    volumes:
+      - ./redis-node/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./cluster-entrypoint.sh:/cluster-entrypoint.sh
+    environment:
+      - IS_FIRST_NODE=false
+      - REDIS_NODES=${REDIS_NODES}
+    ports:
+      - 7005:6379
+    networks:
+      - redis-cluster-net
+
+  redis-node-6:
+    image: redis:7.0
+    container_name: redis-node-6
+    command: /cluster-entrypoint.sh
+    volumes:
+      - ./redis-node/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./cluster-entrypoint.sh:/cluster-entrypoint.sh
+    environment:
+      - IS_FIRST_NODE=false
+      - REDIS_NODES=${REDIS_NODES}
+    ports:
+      - 7006:6379
+    networks:
+      - redis-cluster-net
+
+networks:
+  redis-cluster-net:
+    driver: bridge
