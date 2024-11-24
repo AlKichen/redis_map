@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: redis_map
+#redis:
+#  mode: standalone
+#  userName: username
+#  password: changeit
+#  nodes: host.docker.internal:6380
+#  connectionTimeOut: 30
+redis:
+  mode: redis-cluster
+  userName:
+  password:
+  nodes: 127.0.0.1:7000, 127.0.0.1:7001
+  connectionTimeOut: 30

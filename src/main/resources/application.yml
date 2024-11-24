@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: redis_map
+redis:
+  mode: ${REDIS_MODE}
+  userName: ${REDIS_USERNAME}
+  password: ${REDIS_PASSWORD}
+  nodes: ${REDIS_NODES}
+  connectionTimeOut: ${REDIS_TIMEOUT}

@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+/appendonly.aof
+/dump.rdb
+
+application-dev.yml
