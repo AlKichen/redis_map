@@ -47,11 +47,20 @@ sudo nano /var/lib/redis/7005/7005.conf
 ```
 
 ### Content of Configuration Files
+#### It is necessary to replace for each file 7000 -> 7001 ... 7002 etc.
 
 ```
 port 7000
 cluster-enabled yes
 cluster-config-file /var/lib/redis/7000/nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+```
+#### For example 7001
+```
+port 7001
+cluster-enabled yes
+cluster-config-file /var/lib/redis/7001/nodes.conf
 cluster-node-timeout 5000
 appendonly yes
 ```
@@ -125,11 +134,20 @@ C:\RedisCluster\7005\7005.conf
 ```
 
 ### Content of Configuration Files
+#### It is necessary to replace for each file 7000 -> 7001 ... 7002 etc.
 
 ```
 port 7000
 cluster-enabled yes
 cluster-config-file C:\RedisCluster\7000\nodes.conf
+cluster-node-timeout 5000
+appendonly yes
+```
+#### For example for 7001
+```
+port 7001
+cluster-enabled yes
+cluster-config-file C:\RedisCluster\7001\nodes.conf
 cluster-node-timeout 5000
 appendonly yes
 ```

@@ -16,11 +16,12 @@
 - [Redis Cluster Using Docker](https://medium.com/@ahmettuncertr/redis-cluster-using-docker-1c8458a93d4b)
 - [Setup a Redis in a Local Machine - Redis Clustering](https://medium.com/@ishara11rathnayake/setup-a-redis-in-a-local-machine-redis-clustering-120289f71df5)
 - [External Access to a Kubernetes Redis Cluster](https://dev.to/kermodebear/external-access-to-a-kuberenetes-redis-cluster-46n6)
+- [How to Deploy a Redis Cluster in Kubernetes](https://medium.com/@dmitry.romanoff/how-to-deploy-a-redis-cluster-in-kubernetes-65c967887f6f)
 
 ### Альтернатива
 Для решения проблемы я записал подробную инструкцию по запуску Redis в режиме **redis-cluster**, установив его локально на ПК.  
 Инструкция находится в директории:  
-`redis-cluster/redis-cluster-locally`
+`redis-db-dev/redis-cluster-locally`
 
 ## Запуск в режиме отладки
 Для локального использования в режиме отладки:
