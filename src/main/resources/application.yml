@@ -1,9 +1,18 @@
+# The name of the application, used for identification within a Spring environment.
 spring:
   application:
     name: redis_map
-redis:
+# Configuration block for Redis connection settings.
+redis-configuration:
+  # The mode in which Redis is running (e.g., standalone, cluster, sentinel).
   mode: ${REDIS_MODE}
+  # The username used for authentication when connecting to the Redis server.
   userName: ${REDIS_USERNAME}
+  # The password used for authentication when connecting to the Redis server.
   password: ${REDIS_PASSWORD}
+  # The array of nodes in the form of host and port, used for connecting to the Redis cluster or standalone nodes.
   nodes: ${REDIS_NODES}
+  # The timeout value (in seconds) for establishing a connection to the Redis server.
   connectionTimeOut: ${REDIS_TIMEOUT}
+  # The name of the master node, used specifically when the mode is set to 'sentinel'.
+  masterNameForSentinel: ${REDIS_SENTINEL_MODE_MASTER_NAME}

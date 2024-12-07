@@ -35,3 +35,4 @@ build/
 /dump.rdb
 
 application-dev.yml
+/src/test/resources/application.yml

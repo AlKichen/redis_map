@@ -2,6 +2,9 @@
 spring:
   application:
     name: redis_map
+  # The profile of running application here must test.
+  profiles:
+      active: test
 # Configuration block for Redis connection settings.
 redis-configuration:
   # The mode in which Redis is running (e.g., standalone, cluster, sentinel).

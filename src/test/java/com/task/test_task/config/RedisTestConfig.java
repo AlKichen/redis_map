@@ -1,5 +1,6 @@
 package com.task.test_task.config;
 
+import com.task.test_task.config.RedisProperties;
 import lombok.AllArgsConstructor;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import org.springframework.context.annotation.Bean;
@@ -17,9 +18,9 @@ import java.util.Set;
  * the provided properties.
  */
 @Configuration
-@Profile({"dev", "prod"})
+@Profile("test")
 @AllArgsConstructor
-public class RedisConfig {
+public class RedisTestConfig {
 
     /**
      * The properties used to configure the Redis connection.
